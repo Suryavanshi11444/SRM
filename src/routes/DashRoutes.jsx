@@ -1,16 +1,14 @@
-import HomeLayout from '../layouts/HomeLayout'
-import Home from '../components/pages/Home'
-import About from '../components/pages/About'
-import Contact from '../components/pages/Contact'
+import DashboardLayout from '../layouts/DashboardLayout'
+import DashboardHome from '../components/pages/DashboardHome'
+import ManageProducts from '../components/pages/ManageProducts'
 
-const IndexRoutes = {
-  path: '/',
-  element: <HomeLayout />,
+const DashRoutes = {
+  path: '/dashboard',
+  element: <DashboardLayout />,
   children: [
-    { path: '/', element: <Home /> },
-    { path: '/about', element: <About /> },
-    { path: '/contact', element: <Contact /> }
+    { path: '/dashboard', element: <DashboardHome /> },
+    { path: '/dashboard/manage-products', element: <ManageProducts /> }
   ]
 }
 
-export default IndexRoutes
+export default DashRoutes
